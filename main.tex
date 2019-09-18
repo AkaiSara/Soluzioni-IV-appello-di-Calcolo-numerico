@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+
+\usepackage{listings}
+\usepackage{verbatim}
+
+\usepackage{geometry}
+\geometry{ a4paper, left=2cm, right=2cm}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+    \title{Soluzioni quarto appello di calcolo numerico \\ 11 settembre 2019}
+    \author{Sara Righetto [AkaiSara]}
+
+    \maketitle
+
+    \section{Esercizio 1}
+    \begin{enumerate}
+        \item $\alpha _1 \in [-1.25, -0.75]$ , $\alpha _2 \in [-2 , -1.5]$
+        \item $f'(x) = 2x +2 - \frac{1}{x}$
+        \item \verbatiminput{ris.txt}
+        \item $\epsilon _R = \frac{\vert \alpha - x_3 \vert} {\vert \alpha \vert} = \frac{\vert -1 - (-0.999992558) \vert} {\vert -1 \vert} \simeq 0.000007442 \simeq 0.74 \cdot 10^{-5}$ \newline 
+        [Nda: la prof. non aveva specificato un certo $\alpha$ per cui calcolare l'errore quindi durante la correzione ha deciso di usare come $\alpha$ la soluzione determinabile analiticamente]
+        \item  $x = \sqrt{-2x -1 + \log(-x)}$ , $x = \frac{-x^2 -1 +\log(-x)}{2}$
+        \item $p_3 = \frac{\log( \vert x_3 - x_2 \vert / \vert x_2 - x_1 \vert )}{\log(\vert x_2 - x_1 \vert / \vert x_1 - x_0 \vert)} \simeq \frac{-2.8446993250487926}{-1.4268593725791503} \simeq 1.9936788303859232$
+    \end{enumerate}
+
+    \section{Esercizio 2}
+    \begin{enumerate}
+        \item 
+            \( U = \begin{pmatrix}
+                2 & 1 & 0 \\
+                0 & -\frac{1}{2} & 1 \\
+                0 & 0 & 2
+                \end{pmatrix}
+            \) , 
+            \( L = \begin{pmatrix}
+                1 & 0 & 0 \\
+                2 & 1 & 0 \\
+                \frac{1}{2} & -1 & 1
+                \end{pmatrix}
+            \)
+        \item Verificato.
+        \item $\det(A) = \det(L) \cdot \det(U) = 1 \cdot 2 \cdot -\frac{1}{2} \cdot 2 = -2$ quindi, $\det(A^2) = (-2)^2 = 4$
+        \item \( x = \begin{pmatrix}
+            1 & 1 & 1
+            \end{pmatrix}
+        \)$^T$
+        \item Per rispondere alla domanda suggerisco le pagine del libro di teoria p.137 - 138 e gli esempi 4.7 (Gauss con pivoting) - 4.3 (Gauss senza pivoting) 
+    \end{enumerate}
+
+    \section{Esercizio 3}
+    \begin{enumerate}
+        \item $m_0 = 2, h_0 = \frac{1}{4}$, $T(h_0) \simeq 0.558\overline{3}$
+        \item $m_1 = 4, h_1 = \frac{1}{8}$, $T(h_1) \simeq 0.551605339$
+        \item 0.549306144 [Nda: la prof rende già noto sulla consegna la formula per l'integrazione, quindi basta sostituire i valori di $a$ e $b$ dell'intervallo]
+        \item $\epsilon _A = \vert \alpha - T(h_0) \vert = \vert -0.009027189 \vert \simeq 0.9 \cdot 10^{-2}$ \newline
+         $\epsilon _A = \vert \alpha - T(h_1) \vert = \vert -0.002299195 \vert \simeq 0.23 \cdot 10^{-2}$
+    \end{enumerate}
+
+
+\end{document}
